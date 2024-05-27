@@ -10,7 +10,7 @@ function App() {
    return (
       <div className='p-5 bg-gray-100 min-h-screen flex items-center'>
          <div className="p-5 max-w-md mx-auto bg-white rounded-md">
-            <span>Enviar mensaje a Whatsapp</span>
+            <span>Enviar mensaje a Whatsapp desde el celular</span>
             <PhoneInput
                className='mt-2 w-full border-2 border-gray-500 p-3 rounded-md'
                placeholder=""
@@ -19,8 +19,9 @@ function App() {
             />
 
             <a
-               className={cn('mt-2 p-3 block bg-green-500 text-white text-center rounded-md', {
-                  'bg-gray-500 cursor-not-allowed': !isValidValue
+               className={cn('mt-2 p-3 block  text-white text-center rounded-md', {
+                  'bg-gray-500 cursor-not-allowed': !isValidValue,
+                  'bg-green-500 cursor-pointer': isValidValue
                })}
                href={isValidValue ? `https://api.whatsapp.com/send?phone=${value}` : '#'}
             >Enviar
