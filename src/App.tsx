@@ -20,7 +20,7 @@ function App() {
 
             <a
                className={cn('mt-2 p-3 block bg-green-500 text-white text-center rounded-md', {
-                  'bg-gray-400 cursor-not-allowed': !isValidValue
+                  'bg-gray-500 cursor-not-allowed': !isValidValue
                })}
                href={isValidValue ? `https://api.whatsapp.com/send?phone=${value}` : '#'}
             >Enviar
